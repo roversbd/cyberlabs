@@ -1,0 +1,33 @@
+# ---- Python
+backend/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ---- Node
+frontend/node_modules/
+frontend/dist/
+npm-debug.log*
+
+# ---- Local config and secrets
+# Copy .env.example to .env and fill in. Never commit the real .env:
+# that is where the AI provider key goes.
+.env
+.env.*
+!.env.example
+
+# ---- Runtime state, all regenerated on start
+# data/ holds the SQLite db with learner progress
+data/
+# .run/ holds dev.sh pid, log and port files
+.run/
+# AI-generated lab build output, disposable
+labs/generated/build/
+
+# ---- OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
